@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certamen</title>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/comboForm.js"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row mt-2">
+            <div class="col-md-12 bg-dark p-2">
+                <h3 class="text-center text-white">Immobiliaria Carlitos</h3>
+            </div>
+        </div>
+        <div class="row col-md-12">
+
+
+
+
+
+
+            <div class="row bg-light p-3 col-md-6">
+                <div class="col-md-12">
+
+                    <form action="#" name="formImnobiliaria" class="formImnobiliaria" autocomplete="off">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="">Nombre:</label>
+                            </div>
+                            <div>
+                                <input type="text" name="txt_nombre" class="form-control txt_nombre">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="">Run:</label>
+                            </div>
+                            <div>
+                                <input type="text" name="txt_run" class="form-control txt_run">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label name="">Cantidad:</label>
+                            </div>
+                            <div>
+                                <input type="text" name="txt_cantidad" class="form-control txt_cantidad">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12 text-center">
+                                <label for="">Tipo de Propiedad</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="">Casa:</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="">Departamento:</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="">Parcela:</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <input type="radio" name="indicadores" class="combo_casa" value="uf" data-tipo="casa">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="radio" name="indicadores" class="combo_departemento" value="utm" data-tipo="Departamento">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="radio" name="indicadores" class="combo_parcela" value="dolar" data-tipo="Parcela">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="">Valor UTM/UF/DOLAR:</label>
+                                <label class="valor_mostrar"></label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="">Subtotal:</label>
+                                <label class="valor_subtotal">$$$</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12 text-center">
+                                <label for="">Medios de pago</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="">Efectivo:</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="">Tarjetas:</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="">Cheque:</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <input type="radio" name="indicadores2" class="combo_efectivo" value="0.15">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="radio" name="indicadores2" class="combo_tarjetas" value="0.07">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="radio" name="indicadores2" class="combo_cheques">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="">Descuento M pago:</label>
+                                <label class="valor_descuento">$$$</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="">Total Pago:</label>
+                                <label class="valor_total">$$$</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="submit" class="form-control btn-success" value="Enviar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row bg-light p-2 col-md-6">
+                <div class="col-md-12">
+                    <div class="row mt-2">
+                        <div class="col-md-12 table-responsive">
+                            <table class="bg-dark table table-bordered table-striped">
+                                <thead class="table-dark">
+                                    <th class="text-center" colspan="8">Tabla de registro</th>
+                                    <tr>
+                                        <td>folio</td>
+                                        <td>run</td>
+                                        <td>mombres</td>
+                                        <td>tipo de propiedad</td>
+                                        <td>tipo divisa </td>
+                                        <td>cantidad</td>
+                                        <td>fecha</td>
+                                        <td colspan="3">acciones</td>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="cargarDatosImmobiliaria">
+                                    <tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
